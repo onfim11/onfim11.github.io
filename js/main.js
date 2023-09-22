@@ -1,3 +1,74 @@
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.from('div[class^="macaroon"]', {
+        scrollTrigger:
+            {
+                trigger:'.main_navigation',
+                start: '-150 0',
+                scrub: true
+            },
+            autoAlpha: 0,
+            scale: 0.3,
+            stagger: 0.1
+    })
+gsap.from('div[class^="penut"]', {
+        scrollTrigger:
+            {
+                trigger:'.main_navigation',
+                start: '-100 0',
+                scrub: true
+            },
+        autoAlpha: 0,
+        rotation: 360,
+        stagger: 0.1
+    })
+gsap.from('div[class^="mint"]', {
+    scrollTrigger:
+        {
+            trigger:'.main_navigation',
+            start: '-50 0',
+            scrub: true
+        },
+    autoAlpha: 0,
+    stagger: 0.1
+})
+gsap.to('.logo', {
+    scrollTrigger:
+        {
+            trigger:'.main_navigation',
+            start: '0 0',
+            scrub: true
+        },
+    scale: 0.5
+})
+
+gsap.from('.category_item', {
+    scrollTrigger:
+        {
+            trigger:'.banner_bg',
+            start: '-100 0',
+            scrub: true
+        },
+    autoAlpha: 0,
+    duration: 0.8,
+    x:50,
+    stagger: 1
+})
+
+gsap.from('.anim_items', {
+    scrollTrigger:
+        {
+            trigger:'.category_list',
+            start: '100 0',
+            scrub: true,
+            //markers: true
+        },
+    autoAlpha: 0,
+    x:-50,
+    stagger: 0.6
+})
+
+
 $(document).ready(function(){
     $('.excellence_slider').slick({
         infinite: true,
@@ -14,4 +85,13 @@ $(document).ready(function(){
             '<path d="M8.18243 5L7 6.16667L10.8851 10L7 13.8333L8.18243 15L13.25 10L8.18243 5Z" fill="#292929" fill-opacity="0.8"/>\n' +
             '</svg></span>'
     });
-})
+    $('.bonds_slider').slick({
+        infinite: false,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: false,
+        arrows: false,
+        dots: true
+    });
+});
+

@@ -267,7 +267,9 @@ textarea {
     page-break-after: avoid;
   }
 }
+
 /* common styles */
+
 body{
   background-color:#F7F7F7;
 }
@@ -284,7 +286,18 @@ ul{
 li{
   list-style: none;
 }
+.section_title{
+  margin-bottom: 40px;
+}
+.section_title h2{
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.88rem;
+  text-align: center;
+}
+
 /* header */
+
 .header_slider{
   background-color: #D4E9F9;
   position: relative;
@@ -588,6 +601,7 @@ li{
 }
 
 /* banner section */
+
 div[class^="penut"],
 div[class^="macaroon"],
 div[class^="mint"]{
@@ -719,8 +733,10 @@ div[class^="mint"]{
 }
 
 /* category list section */
+
 .category_list{
   margin-top: -155px;
+  margin-bottom: 70px;
 }
 .category_wrap{
   display: flex;
@@ -762,6 +778,20 @@ div[class^="mint"]{
 .category_wrap .category_item .cat_title a span{
   font-size: 1.25rem;
   font-family: 'Montserrat', sans-serif;
+  position: relative;
+}
+.category_wrap .category_item .cat_title a span:after {
+  content: '';
+  width: 0;
+  height: 1px;
+  background-color: #E7426A;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  transition: all 0.3s ease-in-out;
+}
+.category_wrap .category_item .cat_title a:hover span:after{
+  width: 100%;
 }
 .category_wrap .category_item .cat_description p{
   font-size: 1rem;
@@ -848,3 +878,161 @@ div[class^="mint"]{
   background: linear-gradient(-155.6deg, rgba(255,255,255,0.3) 0%,rgba(255,255,255,0.3) 50%,rgba(255,255,255,0) 50%,rgba(255,255,255,0) 100%);
   z-index: 0;
 }
+
+/* bonds section */
+.bonds{
+  margin-bottom: 93px;
+}
+.bonds_slider{
+  margin-left: -15px;
+  width: calc(100% + 30px);
+}
+.bonds_slider_item_wrap{
+  border-radius: 5px;
+  overflow: hidden;
+  border: 1px solid #EDEDF0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+.bonds_slider_item{
+  margin-right: 15px;
+  margin-left: 15px;
+}
+.bonds_slider_item_slogan{
+  display: inline-flex;
+  position: absolute;
+  top: 15px;
+  left: 0;
+  padding: 4px 10px;
+  background-color: #FF4D6D;
+  font-size: 0.95rem;
+  font-style: normal;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 1;
+  align-items: center;
+  height: 20px;
+  transition: all 0.3s ease-in-out;
+}
+.bonds_slider_item_slogan:after{
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 10px 10px 0;
+  border-color: #FF4D6D transparent #FF4D6D #FF4D6D;
+  transform: rotate(0deg);
+  display: inline-block;
+  position: absolute;
+  right: -10px;
+  top: 0;
+  transition: all 0.3s ease-in-out;
+}
+.bonds_slider_item_content{
+  padding: 20px;
+  background-color: #FF4D6D;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+.bonds_slider_item_content p{
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  margin: 0 0 10px 0;
+  line-height: 1.25;
+}
+.bonds_slider_item_wrap:hover .bonds_slider_item_slogan{
+  background-color: #8CC4EC;
+}
+.bonds_slider_item_wrap:hover .bonds_slider_item_slogan:after{
+  border-color: #8CC4EC transparent #8CC4EC #8CC4EC;
+}
+.bonds_slider_item_wrap:hover .bonds_slider_item_content{
+  background-color: #8CC4EC;
+}
+.slick-dots{
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 15px;
+  margin-top: 35px;
+}
+.slick-dots li{
+  margin-left: 10px;
+  height: 12px;
+}
+.slick-dots li button{
+  text-indent: -9999px;
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
+  border: 1px solid #E5E5E5;
+  width: 12px;
+  height: 12px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.slick-dots li:hover button,
+.slick-dots li.slick-active button{
+  background-color: #FF4D6D;
+  border: 1px solid #FF4D6D;
+}
+
+/* hollidays section */
+.holidays{
+  margin-bottom: 100px;
+}
+
+.holidays_wrap{
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+}
+.dashed_border{
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 87%;
+  height: 2px;
+  background-image: url(../img/dotteb_border.svg);
+  top: 37px;
+  z-index: 0;
+}
+.holidays_item{
+  position: relative;
+  z-index: 2;
+}
+.first-holliday .hi_img img{
+  position: relative;
+  top: -30px;
+  left: 15px;
+}
+.hi_img{
+  height: 75px;
+  display: flex;
+  align-items: center;
+}
+.hi_wrap{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+}
+.first-holliday .hi_text{
+  font-family: Montserrat;
+  font-size: 0.88rem;
+}
+.holidays_item .hi_text{
+  font-family: Montserrat;
+  font-size: 0.88rem;
+}
+
