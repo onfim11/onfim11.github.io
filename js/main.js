@@ -50,7 +50,7 @@ gsap.from('.category_item', {
             scrub: true
         },
     autoAlpha: 0,
-    duration: 0.8,
+    duration: 1,
     x:50,
     stagger: 1
 })
@@ -64,6 +64,7 @@ gsap.from('.anim_items', {
             //markers: true
         },
     autoAlpha: 0,
+    duration: 1,
     x:-50,
     stagger: 0.6
 })
@@ -88,6 +89,14 @@ $(document).ready(function(){
     $('.bonds_slider').slick({
         infinite: false,
         slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: false,
+        arrows: false,
+        dots: true
+    });
+    $('.news_wrap_slider').slick({
+        infinite: false,
+        slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: false,
         arrows: false,
