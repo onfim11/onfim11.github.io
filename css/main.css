@@ -703,6 +703,9 @@ div[class^="mint"]{
   display: flex;
   align-items: center;
 }
+.banner_side:first-child{
+  flex-shrink: 0;
+}
 .banner_wrap .banner_side:last-child{
   width: 100%;
 }
