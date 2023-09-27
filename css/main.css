@@ -299,8 +299,8 @@ li{
   border-radius: 3px;
   border: 1px solid #E7426A;
   height: 50px;
-  padding-left: 39px;
-  padding-right: 39px;
+  padding-left: 50px;
+  padding-right: 50px;
   color: #E7426A;
   display: inline-flex;
   justify-content: center;
@@ -1066,6 +1066,7 @@ div[class^="mint"]{
 .holidays_item .hi_text{
   font-family: Montserrat;
   font-size: 0.88rem;
+  font-weight: 600;
 }
 
 /* popular goods section*/
@@ -1092,7 +1093,7 @@ div[class^="mint"]{
   justify-content: space-between;
 }
 .goods_item .goods_item_content{
-  padding: 20px;
+  padding: 20px 20px 15px 20px;
 }
 .goods_item .goods_item_content p,
 .goods_item .goods_item_content h3{
@@ -1174,7 +1175,8 @@ div[class^="mint"]{
   border: 1px solid #EDEDF0;
 }
 .news_item .news_item_content{
-  padding: 20px;
+  padding: 18px 20px 20px 20px;
+  min-height: 210px;
 }
 .news_item .news_item_content .news_date{
   font-size: 0.88rem;
@@ -1183,8 +1185,8 @@ div[class^="mint"]{
   font-weight: 400;
 }
 .news_item .news_item_content h3{
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 5px;
+  margin-bottom: 8px;
   font-family: Montserrat;
   font-size: 1.13rem;
 }
@@ -1201,7 +1203,7 @@ div[class^="mint"]{
 
 /* take care */
 .take_care{
-  margin-bottom: 85px;
+  margin-bottom: 70px;
 }
 .take_care_wrap{
   display: flex;
@@ -1218,7 +1220,7 @@ div[class^="mint"]{
   margin-bottom: 30px;
 }
 .take_care_wrap .take_care_item .take_care_content h3{
-  margin: 0 0 11px 0;
+  margin: 0 0 3px 0;
   font-family: Montserrat;
   font-size: 1.13rem;
   font-weight: 600;
@@ -1233,4 +1235,135 @@ div[class^="mint"]{
 /* footer */
 footer{
   background: #EBEDEE;
+  padding-top: 58px;
+  padding-bottom: 58px;
+}
+.footer_inner_wrap{
+  display: flex;
+  align-items: stretch;
+}
+.footer_inner_wrap>div{
+  margin-right: 30px;
+}
+.footer_inner_wrap>div:last-child{
+  margin-right: 0;
+}
+.footer_inner_wrap .block_copyright{
+  max-width: 370px;
+  flex-shrink: 0;
+}
+.footer_inner_wrap .block_copyright .block_copyright_top_block .advantages {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-left: 11px;
+  padding-right: 11px;
+}
+.footer_inner_wrap .block_copyright .block_copyright_top_block .advantages .advantages_item{
+  width: 30%;
+}
+.footer_inner_wrap .block_copyright .block_copyright_top_block .advantages .advantages_item .advantages_item_img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 39px;
+  margin-bottom: 14px;
+}
+.footer_inner_wrap .block_copyright .block_copyright_top_block .advantages .advantages_item .advantages_item_text{
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 110%;
+  text-align: center;
+}
+.block_copyright_bottom_block{
+  margin-top: 28px;
+}
+.block_copyright_bottom_block span.copyr{
+  margin-bottom: 2px;
+}
+.block_copyright_bottom_block span{
+  display: flex;
+  font-size: 0.74rem;
+  font-weight: 300;
+  line-height: 1.2;
+  text-align: left;
+}
+.widgets_footer_menu{
+  display: flex;
+}
+.widgets_footer_menu > div{
+  margin-right: 20px;
+  width: 175px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.widgets_footer_menu > div:last-child{
+  margin-right: 0;
+}
+.widgets_footer_menu .menu_title{
+  margin: 0;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+.widgets_footer_menu ul li{
+  margin-bottom: 5px;
+}
+.widgets_footer_menu ul li a{
+  text-decoration: none;
+  font-size: 0.88rem;
+  color: #292929;
+  line-height: 1;
+  font-weight: 400;
+  transition: all 0.3s ease-in-out;
+}
+.widgets_footer_menu ul li a:hover{
+  color: #E7426A;
+}
+
+.social_footer_block{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
+}
+.social_footer_block_top{
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.social_footer_block_top .phone_footer_number{
+  text-decoration: none;
+  font-size: 1.13rem;
+  display: flex;
+  font-weight: 600;
+  color: #292929;
+  flex-shrink: 0;
+  margin-bottom: 5px;
+  transition: all 0.3s ease-in-out;
+}
+.social_footer_block_top .phone_footer_number:hover{
+  color: #E7426A;
+}
+.work_hours{
+  font-size: 0.88rem;
+  line-height: 1;
+  font-weight: 400;
+}
+.social_list {
+  display: flex;
+  justify-content: flex-end;
+}
+.social_footer_block_bottom .social_list li{
+  margin-left: 18px;
+  margin-right: 0;
+}
+.social_list li a{
+  display: flex;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
 }
